@@ -10,8 +10,10 @@ def most_expensive(file_path: str) -> str:
     Returns:
         str: most expensive item
     """
-    pass
-
+    f=open('data.json')
+    x=json.load(f)
+    m=max(x.values())
+    return m
 # test
 file_path = "data.json"
 most_expensive_item = most_expensive(file_path)
