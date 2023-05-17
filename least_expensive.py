@@ -12,7 +12,10 @@ def least_expensive(file_path: str) -> str:
     """
     f=open('data.json')
     x=json.load(f)
-    m=min(x.values())
+    m=100000
+    for i in x.values():
+        if m>i:
+            m=i
     return m
 
 # test
